@@ -1,7 +1,7 @@
 'use strict';
 
-var primes = [2, 3, 5, 7];
-var number = 8;
+var primes = [2];
+var number = 0;
 var i = 0;
 var factors = 0;
 
@@ -15,16 +15,13 @@ function isPrime(number) {
   }
 
   if (factors === 0) {
-    console.log(number + ' is prime.');
     primes.push(number);
     document.write('<li>' + number + '</li>');
   }
-
-  number++;
 }
 
 function prime(maxRange) {
-  for (var i = 8; i < maxRange; i++) {
+  for (var i = 3; i < maxRange; i += 2) {
     isPrime(i);
   }
 
