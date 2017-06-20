@@ -9,14 +9,15 @@ function isPrime(number) {
   factors = 0;
   for (var i = 0; i < primes.length; i++) {
     if (number % primes[i] === 0) {
+      i = primes.length;
       factors++;
-      console.log(number + ' is not prime');
     }
   }
 
   if (factors === 0) {
     console.log(number + ' is prime.');
     primes.push(number);
+    document.write('<li>' + number + '</li>');
   }
 
   number++;
@@ -27,10 +28,10 @@ function prime(maxRange) {
     isPrime(i);
   }
 
-  console.log('Success! ' + primes.length + 'primes found between zero and ' + maxRange + '.');
+  console.log('Success! ' + primes.length + ' primes found between zero and ' + maxRange + '.');
   console.log(primes);
 }
 
-var maxRange = prompt("Calculate all prime numbers below: ");
+var maxRange = prompt('Calculate all prime numbers below: ');
 prime(maxRange);
-alert("Found " + primes.length + " prime numbers below " + maxRange + " . Check the console for the list of primes!")
+alert('Found ' + primes.length + ' prime numbers below ' + maxRange + '. Check the console for the list of primes!');
