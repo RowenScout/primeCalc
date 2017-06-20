@@ -1,7 +1,6 @@
 'use strict';
 
 var primes = [2];
-var number = 0;
 var i = 0;
 var factors = 0;
 
